@@ -1,0 +1,79 @@
+<!-- `ID`, `AccountID`, `ActionType`, `Amount`, `Credit`, `payQnt`, `createdAt` -->
+<div class="container actionForm">
+  <label for="currentAccountID p-2">enter account number</label>
+  <input
+    [(ngModel)]="bankService._currentAccountID"
+    class="form-control p-2"
+    id="currentAccountID"
+    placeholder="enter account number"
+    [ngModelOptions]="{ standalone: true }"
+  />
+
+  <div class="dropdown">
+    <button
+      class="btn btn-success dropdown-toggle my-2"
+      type="button"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Select action
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <a class="dropdown-item" (click)="bankService.actionTypeClick(1)"
+          >Attraction</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="bankService.actionTypeClick(2)"
+          >Another action</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="bankService.actionTypeClick(3)"
+          >Loan</a
+        >
+      </li>
+    </ul>
+  </div>
+  <label for="currentAmount p-2">enter Amount</label>
+  <input
+    type="number"
+    [(ngModel)]="bankService._currentAmount"
+    class="form-control p-2"
+    id="currentAmount"
+    placeholder="enter account number"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <div [ngClass]="bankService._currentActionType !== 3 ? 'hide' : ''">
+    <label for="currentCredit p-2">enter Credit</label>
+    <input
+      type="number"
+      [(ngModel)]="bankService._currentCredit"
+      class="form-control p-2"
+      id="currentCredit"
+      placeholder="enter account number"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <div [ngClass]="bankService._currentActionType !== 3 ? 'hide' : ''">
+    <label for="currentPayQnt p-2">enter payQnt</label>
+    <input
+      type="number"
+      [(ngModel)]="bankService._currentPayQnt"
+      class="form-control p-2"
+      id="currentPayQnt"
+      placeholder="enter account number"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <button
+    class="btn btn-success my-3 p-2"
+    (click)="bankService.addNewActionClick()"
+  >
+    Insert action
+  </button>
+</div>
+<!-- FIXME: not work -->
+<!-- routerLink="/logIn" -->

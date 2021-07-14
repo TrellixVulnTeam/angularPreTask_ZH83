@@ -2,8 +2,6 @@ const express = require("express");
 var app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-var mysql = require("mysql2");
-const con = require("./utils/database");
 
 var corsOptions = {
   origin: "*",
@@ -19,10 +17,10 @@ app.use(bodyParser.json());
 
 app.use(cors(corsOptions));
 
-const Servers = require("./routes/serverRoute");
-app.use("/servers", Servers);
+const Users = require("./routes/usersRoute.js");
+app.use("/users", Users);
 
-const Status = require("./routes/statusRoute");
-app.use("/servers/status", Status);
+const Women = require("./routes/womenRoute.js");
+app.use("/women", Women);
 
 app.listen(5004);

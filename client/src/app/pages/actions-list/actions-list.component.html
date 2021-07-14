@@ -1,0 +1,8 @@
+<div class="row p-5">
+  <div
+    *ngFor="let action of bankService._actions"
+    class="col-lg-3 col-md-6 col-12"
+  >
+    <app-single-act-card [action]="action"></app-single-act-card>
+  </div>
+</div>

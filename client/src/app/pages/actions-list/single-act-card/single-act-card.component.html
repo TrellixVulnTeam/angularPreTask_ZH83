@@ -1,0 +1,33 @@
+<div
+  class="card mb-3"
+  style="max-width: 18rem"
+  [ngClass]="action.ActionType === 1 ? 'text-success' : 'text-danger'"
+>
+  <div class="card-header">
+    <div class="row">AccountID: {{ action.AccountID }}</div>
+  </div>
+  <div
+    class="card-body"
+    [ngClass]="action.ActionType === 1 ? 'text-success' : 'text-danger'"
+  >
+    <h5 class="card-title">
+      Action Type:
+      {{
+        action.ActionType === 1
+          ? "Deposit"
+          : action.ActionType === 2
+          ? " Withdraw "
+          : "Loan"
+      }}
+    </h5>
+    <h6>Amount: {{ action.Amount }}</h6>
+    <h6>{{ action.ActionType === 3 ? "Credit: " + action.Credit : "" }}</h6>
+    <h6>{{ action.ActionType === 3 ? "PayQnt: " + action.payQnt : "" }}</h6>
+    <div>created At:</div>
+    <p class="card-text">
+      {{ action.createdAt }}
+    </p>
+  </div>
+</div>
+<!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
+<!-- `ID`, `AccountID`, `ActionType`, `Amount`, `Credit`, `payQnt`, `createdAt` -->
