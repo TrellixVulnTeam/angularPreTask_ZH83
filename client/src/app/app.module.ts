@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FilteredServersPipe } from './pipes/filter-users.pipe';
+import { LogInFormComponent } from './components/forms/log-in-form/log-in-form.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FilteredServersPipe],
+  declarations: [AppComponent, HomeComponent, FilteredServersPipe, LogInFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

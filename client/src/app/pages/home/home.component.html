@@ -14,10 +14,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <li class="nav-item" (click)="usersService.isAuthenticated()">
+          <a class="nav-link active">{{
+            usersService._isAuthenticated ? "LogOut" : "logIn"
+          }}</a>
         </li>
-        <button
+
+        <!-- <button
           class="btn btn-primary"
           *ngIf="!usersService._isAuthenticated"
           (click)="usersService.isAuthenticated()"
@@ -30,11 +33,7 @@
           (click)="usersService.isAuthenticated()"
         >
           Logout
-        </button>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link active" href="#">Features</a>
-        </li> -->
+        </button> -->
       </ul>
     </div>
   </div>
