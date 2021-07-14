@@ -6,10 +6,10 @@ import { HomeComponent } from './app/pages/home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'HomeComponent', pathMatch: 'prefix' },
-  {
-    path: 'account/actions',
-    component: HomeComponent,
-  },
+  // {
+  //   path: 'account/actions',
+  //   component: HomeComponent,
+  // },
   // {
   //   path: 'account/action',
   //   component: ,

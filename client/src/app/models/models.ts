@@ -1,25 +1,61 @@
-export class Server {
+// `women`(`ID`, `WomanName`, `DateOfBirth`, `Country`, `Description`, `UserID`);
+//  `users`(`ID`, `userName`, `Email`, `Password`, `createdAt`);
+
+// "ID": 12,
+// "WomanName": " ",
+// "DateOfBirth": "1964-01-13T12:24:20.000Z",
+// "Country": "",
+// "Description": "",
+// "UserID": 1,
+// "UserName": ""
+
+export class Woman {
   ID: number = 0;
-  ServerName: string = '';
-  CompanyName: string = '';
-  IP: number = 0;
-  CompanyID: number = 0;
-  Status: number = 0;
+  WomanName: string = '';
+  DateOfBirth: string = '';
+  Country: string = '';
+  Description: string = '';
+  UserID: number = 0;
+  UserName: string = '';
+
+  constructor(
+    ID?: number,
+    WomanName?: string,
+    DateOfBirth?: string,
+    Country?: string,
+    Description?: string,
+    UserID?: number,
+    UserName?: string
+  ) {
+    this.ID = ID || 0;
+    this.WomanName = WomanName || '';
+    this.DateOfBirth = DateOfBirth || '';
+    this.Country = Country || '';
+    this.Description = Description || '';
+    this.UserID = UserID || 0;
+    this.UserName = UserName || '';
+  }
+}
+//  `users`(`ID`, `userName`, `Email`, `Password`, `createdAt`);
+
+export class User {
+  ID: number = 0;
+  userName: string = '';
+  Email: string = '';
+  Password: string = '';
   createdAt: string = '';
 
   constructor(
     ID?: number,
-    ServerName?: string,
-    CompanyName?: string,
-    IP?: number,
-    Status?: number,
+    userName?: string,
+    Email?: string,
+    Password?: string,
     createdAt?: string
   ) {
     this.ID = ID || 0;
-    this.ServerName = ServerName || '';
-    this.CompanyName = CompanyName || '';
-    this.IP = IP || 0;
-    this.Status = Status || 0;
+    this.userName = userName || '';
+    this.Email = Email || '';
+    this.Password = Password || '';
     this.createdAt = createdAt || '';
   }
 }
