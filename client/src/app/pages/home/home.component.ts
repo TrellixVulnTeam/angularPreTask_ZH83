@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/models';
 import { ApiService } from 'src/app/services/api.service';
-import { BankService } from 'src/app/services/bank.service';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,10 @@ import { BankService } from 'src/app/services/bank.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public bankService: BankService, public apiService: ApiService) {}
+  constructor(
+    public usersService: UsersService,
+    public apiService: ApiService
+  ) {}
 
   ngOnInit(): void {}
 }
