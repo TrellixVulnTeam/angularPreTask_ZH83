@@ -24,8 +24,8 @@ const routes: Routes = [
     component: WomenListComponent,
   },
   // {
-  //   path: 'posts/:id',
-  //   component: PostsComponent,
+  //   path: 'forms/editWoman/:currentUser',
+  //   component: AddWomanFormComponent,
   // },
 ];
 

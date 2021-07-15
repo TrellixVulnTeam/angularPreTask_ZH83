@@ -22,6 +22,7 @@ exports.updateWomen = async (req, res) => {
   let woman = await con.execute(`UPDATE women SET WomanName='${req.body.WomanName}', DateOfBirth='${req.body.DateOfBirth}' ,Country='${req.body.Country}' ,Description='${req.body.Description}' WHERE ID=${req.body.ID}`);
   res.send(woman[0]);
 };
+// URL:   http://www.localhost:5004/women/updateWomen
 
 // DELETE (woman)
 exports.deleteWomanByID = async (req, res) => {

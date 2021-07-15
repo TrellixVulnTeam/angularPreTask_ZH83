@@ -11,8 +11,8 @@
     <p class="card-text">{{ woman.Description }}</p>
   </div>
   <div class="card-footer bg-transparent border-secondary">
-    <button
-      class="btn btn-secondary"
+    <i
+      class="fas fa-trash fa-lg mx-2 me-5 ps-4"
       (click)="
         womenService.deleteWomen(
           '/women/deleteWomanByID?ID=',
@@ -20,11 +20,18 @@
           woman.UserID
         )
       "
-    >
-      Delete
-    </button>
+    ></i>
+    <i
+      class="fas fa-edit fa-lg ms-5 ps-5"
+      (click)="womenService.editClicked(woman.ID)"
+    ></i>
+    <!-- <i
+      class="fas fa-edit fa-lg ms-5 ps-5"
+       routerLink="/forms/addWoman"
+    ></i> -->
   </div>
 </div>
 <!-- // `women`(`ID`, `WomanName`, `DateOfBirth`, `Country`, `Description`, `UserID`); -->
 <!-- /women/deleteWomen?ID=${ woman.ID } -->
 <!-- '/women/deleteWomen?ID=' + {{ woman.ID }} -->
+<!-- (click)="womenService.updateWomen('/women/updateWomen', woman.ID, woman.UserID)" -->

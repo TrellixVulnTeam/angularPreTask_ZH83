@@ -36,14 +36,14 @@
   </div>
   <div class="col-md-12">
     <label for="descriptionInput" class="form-label">Description</label>
-    <input
+    <textarea
       type="text"
       [(ngModel)]="womenService._descriptionInput"
       [ngModelOptions]="{ standalone: true }"
       class="form-control"
       id="descriptionInput"
       required
-    />
+    ></textarea>
   </div>
 
   <div class="col-12 mt-3">
