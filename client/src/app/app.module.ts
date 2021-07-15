@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FilteredServersPipe } from './pipes/filter-users.pipe';
 import { LogInFormComponent } from './components/forms/log-in-form/log-in-form.component';
+import { AddWomanFormComponent } from './components/forms/add-woman-form/add-woman-form.component';
+import { WomenListComponent } from './pages/women-list/women-list.component';
+import { SingleWomanCardComponent } from './pages/women-list/single-woman-card/single-woman-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FilteredServersPipe, LogInFormComponent],
+  declarations: [AppComponent, HomeComponent, FilteredServersPipe, LogInFormComponent, AddWomanFormComponent, WomenListComponent, SingleWomanCardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

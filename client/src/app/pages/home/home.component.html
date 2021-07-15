@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Women</a>
+    <span class="welcome mx-2">{{
+      usersService._currentUser.length === 0
+        ? ""
+        : "hello, " + usersService._currentUser[0].UserName
+    }}</span>
     <button
       class="navbar-toggler"
       type="button"
@@ -39,20 +44,6 @@
   </div>
 </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <button class="btn btn-primary m-5" routerLink="/actionForm">
-        Add Action
-      </button>
-    </div>
-    <div class="col-4">
-      <button class="btn btn-primary m-5" routerLink="/logIn">
-        See Actions
-      </button>
-    </div>
-    <div class="col-4">
-      <button class="btn btn-primary m-5" routerLink="/">Back Home</button>
-    </div>
-  </div>
-</div>
+<!-- <div class="container">
+  <div class="row"><app-log-in-form></app-log-in-form></div>
+</div> -->

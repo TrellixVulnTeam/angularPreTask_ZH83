@@ -1,5 +1,5 @@
 // `women`(`ID`, `WomanName`, `DateOfBirth`, `Country`, `Description`, `UserID`);
-//  `users`(`ID`, `userName`, `Email`, `Password`, `createdAt`);
+//  `users`(`ID`, `UserName`, `Email`, `Password`, `createdAt`);
 
 // "ID": 12,
 // "WomanName": " ",
@@ -36,24 +36,24 @@ export class Woman {
     this.UserName = UserName || '';
   }
 }
-//  `users`(`ID`, `userName`, `Email`, `Password`, `createdAt`);
+//  `users`(`ID`, `UserName`, `Email`, `Password`, `createdAt`);
 
 export class User {
   ID: number = 0;
-  userName: string = '';
+  UserName: string = '';
   Email: string = '';
   Password: string = '';
   createdAt: string = '';
 
   constructor(
     ID?: number,
-    userName?: string,
+    UserName?: string,
     Email?: string,
     Password?: string,
     createdAt?: string
   ) {
     this.ID = ID || 0;
-    this.userName = userName || '';
+    this.UserName = UserName || '';
     this.Email = Email || '';
     this.Password = Password || '';
     this.createdAt = createdAt || '';

@@ -1,28 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogInFormComponent } from './components/forms/log-in-form/log-in-form.component';
 import { HomeComponent } from './pages/home/home.component';
+import { WomenListComponent } from './pages/women-list/women-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Home', pathMatch: 'prefix' },
+  { path: '', redirectTo: 'womenWhoChangedThe', pathMatch: 'prefix' },
+  // {
+  //   path: 'womenWhoChangedThe',
+  //   component: HomeComponent,
+  // },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'forms/logIn',
+    component: LogInFormComponent,
+  },
+  {
+    path: 'womenList',
+    component: WomenListComponent,
   },
   // {
-  //   path: 'actionList',
-  //   component: ,
-  // },
-  // {
-  //   path: 'actionForm',
-  //   component: ,
-  // },
-  // {
-  //   path: 'logIn',
-  //   component: ,
-  // },
-  // {
-  //   path: 'viewActions/:AccountID',
-  //   component: ViewActionsComponent,
+  //   path: 'posts/:id',
+  //   component: PostsComponent,
   // },
 ];
 

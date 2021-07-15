@@ -14,21 +14,30 @@ export class ErrorsService {
       error['ERROR'].DISPLAY_ERROR
     );
     Swal.fire({
-      text: error['ERROR'].DISPLAY_ERROR + ' \n נסה שנית מאוחר יותר !!',
+      text: 'Something went wrong, please try again',
       icon: 'error',
-      title: 'שגיאת שרת !!',
+      title: 'Server error !!',
       showConfirmButton: false,
-      timer: 5500,
+      timer: 6500,
     });
   }
 
   async errorHandlingHttp(error: any) {
+    console.log('DEVELOPER_ERROR : ', error.message);
     Swal.fire({
-      text: error.message + ' \n נסה שנית מאוחר יותר !!',
+      text: 'Something went wrong, please try again',
       icon: 'error',
-      title: 'שגיאת שרת !!',
-      showConfirmButton: false,
-      timer: 5500,
+      title: 'Server error !!',
+      // showCancelButton: true,
+      showConfirmButton: true,
+      // confirmButtonColor: '#dc3545',
+      timer: 6500,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown',
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp',
+      },
     });
   }
 }
