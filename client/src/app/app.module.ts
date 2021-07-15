@@ -11,9 +11,19 @@ import { LogInFormComponent } from './components/forms/log-in-form/log-in-form.c
 import { AddWomanFormComponent } from './components/forms/add-woman-form/add-woman-form.component';
 import { WomenListComponent } from './pages/women-list/women-list.component';
 import { SingleWomanCardComponent } from './pages/women-list/single-woman-card/single-woman-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FilteredServersPipe, LogInFormComponent, AddWomanFormComponent, WomenListComponent, SingleWomanCardComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FilteredServersPipe,
+    LogInFormComponent,
+    AddWomanFormComponent,
+    WomenListComponent,
+    SingleWomanCardComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

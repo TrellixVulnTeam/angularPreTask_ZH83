@@ -10,6 +10,21 @@
     <h6 class="text-danger">Description:</h6>
     <p class="card-text">{{ woman.Description }}</p>
   </div>
-  <div class="card-footer bg-transparent border-secondary">Footer</div>
+  <div class="card-footer bg-transparent border-secondary">
+    <button
+      class="btn btn-secondary"
+      (click)="
+        womenService.deleteWomen(
+          '/women/deleteWomanByID?ID=',
+          woman.ID,
+          woman.UserID
+        )
+      "
+    >
+      Delete
+    </button>
+  </div>
 </div>
 <!-- // `women`(`ID`, `WomanName`, `DateOfBirth`, `Country`, `Description`, `UserID`); -->
+<!-- /women/deleteWomen?ID=${ woman.ID } -->
+<!-- '/women/deleteWomen?ID=' + {{ woman.ID }} -->

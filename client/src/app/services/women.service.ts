@@ -27,13 +27,24 @@ export class WomenService {
     )) as Array<Woman>;
     console.log('_womenARR: ', this._womenARR);
   }
-  // exports.insertNewWoman = async (req, res) => {
-  //   let woman = await con.execute(`INSERT INTO women(WomanName, DateOfBirth, Country, Description, UserID) VALUES ('${req.body.WomanName}','${req.body.DateOfBirth}','${req.body.Country}','${req.body.Description}','${req.body.UserID}')`);
+
+  //   // DELETE (woman)
+  // exports.deleteWomanByID = async (req, res) => {
+  //   let woman = await con.execute(`DELETE FROM women WHERE ID=${req.query.ID}`);
   //   res.send(woman[0]);
   // };
+
+  async deleteWomen(url: string, ID?: number, userId?: number) {
+    // console.log('userId: ', userId);
+    // console.log('url: ', url);
+    this.result = (await this.apiService.createGetService(url + ID)) as any;
+    this.getWomenByUserID(`/women/getWomenByUserID?UserID=${userId}`);
+    console.log('_womenARR AFTER delete: ', this._womenARR);
+    this.nav.navigate(['womenList']);
+  }
+  // URL:   http://www.localhost:5004/women/deleteWomanByID?ID=
+
   async addWomanByUserID(url: string, userId?: number) {
-    console.log('userId: ', userId);
-    console.log('url: ', url);
     if (
       this._womanNameInput === '' ||
       this._dateOfBirthInput === '' ||
