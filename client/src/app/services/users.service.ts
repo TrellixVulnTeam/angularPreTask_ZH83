@@ -52,8 +52,8 @@ export class UsersService {
       this.nav.navigate(['']);
       this._currentUser = [];
     } else {
-      this._isAuthenticated = true;
       this.nav.navigate(['forms/logIn']);
+      this._isAuthenticated = true;
     }
     console.log('_isAuthenticated Now', this._isAuthenticated);
   };

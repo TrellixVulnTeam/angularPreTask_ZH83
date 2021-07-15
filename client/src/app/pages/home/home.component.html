@@ -24,6 +24,13 @@
             usersService._isAuthenticated ? "LogOut" : "logIn"
           }}</a>
         </li>
+        <li
+          *ngIf="usersService._isAuthenticated"
+          class="nav-item"
+          routerLink="forms/addWoman"
+        >
+          <a class="nav-link active"> Add Woman </a>
+        </li>
 
         <!-- <button
           class="btn btn-primary"
